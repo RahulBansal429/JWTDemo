@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AC48448\\Desktop\\Personal Document\\net Core\\JWTDemo1\\JWTDemo\\JWTDemo.csproj": {}
+    "C:\\Users\\vivek\\Source\\Repos\\JWTDemoRahul\\JWTDemo\\JWTDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AC48448\\Desktop\\Personal Document\\net Core\\JWTDemo1\\JWTDemo\\JWTDemo.csproj": {
+    "C:\\Users\\vivek\\Source\\Repos\\JWTDemoRahul\\JWTDemo\\JWTDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AC48448\\Desktop\\Personal Document\\net Core\\JWTDemo1\\JWTDemo\\JWTDemo.csproj",
+        "projectUniqueName": "C:\\Users\\vivek\\Source\\Repos\\JWTDemoRahul\\JWTDemo\\JWTDemo.csproj",
         "projectName": "JWTDemo",
-        "projectPath": "C:\\Users\\AC48448\\Desktop\\Personal Document\\net Core\\JWTDemo1\\JWTDemo\\JWTDemo.csproj",
-        "packagesPath": "C:\\Users\\AC48448\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AC48448\\Desktop\\Personal Document\\net Core\\JWTDemo1\\JWTDemo\\obj\\",
+        "projectPath": "C:\\Users\\vivek\\Source\\Repos\\JWTDemoRahul\\JWTDemo\\JWTDemo.csproj",
+        "packagesPath": "C:\\Users\\vivek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vivek\\Source\\Repos\\JWTDemoRahul\\JWTDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AC48448\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vivek\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,12 +83,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.13, 3.1.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -97,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

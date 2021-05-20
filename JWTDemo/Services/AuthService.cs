@@ -26,8 +26,7 @@ namespace JWTDemo.Services
 
         public async Task<string> GetToken(string userName)
         {
-            //throw new NotImplementedException();
-            var userViewModel = await _repository.Get(userName);
+            var userViewModel = await GetUserViewModel(userName);
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, userViewModel.Id.ToString()),
@@ -35,7 +34,7 @@ namespace JWTDemo.Services
 
             };
 
-            foreach (var role in userViewModel.UserRoles)
+            foreach (var role in userViewModel.Roles)
             {
                 claims.Add(new Claim("Roles", role));
             }
@@ -59,15 +58,27 @@ namespace JWTDemo.Services
 
         private async Task<UserViewModel> GetUserViewModel(string userName)
         {
-            var model = await _repository.GetRoles(userName);
+            var user = await _repository.Get(userName);
 
-            if (model == null)
+            if (user == null)
             {
                 return null;
             }
 
-            var userviewmodel = new UserViewModel { Email ="" }
-          
+            var roles = new List<string>();
+
+            foreach (var userRole in user.UserRoles)
+            {
+                roles.Add(userRole.Role.Name);
+            }
+
+            return new UserViewModel
+            {
+                Email = user.Email,
+                Id = user.Id,
+                Name = user.Name,
+                Roles = roles.ToArray()
+            };
         }
 
         public async Task<bool> Login(UserLoginViewModel viewModel)
