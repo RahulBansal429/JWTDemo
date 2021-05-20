@@ -20,7 +20,7 @@ namespace JWTDemo.Controllers
             _service = service;
         }
 
-        [HttpPost]
+        [HttpPost("login")]
         public async Task<IActionResult> Login(UserLoginViewModel viewModel)
         {
             var result = await _service.Login(viewModel);
@@ -34,7 +34,7 @@ namespace JWTDemo.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<IActionResult> Register(UserRegisterViewModel viewModel)
         {
             await _service.Register(viewModel);
