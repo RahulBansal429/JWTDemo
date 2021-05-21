@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -57,7 +58,10 @@ namespace JWTDemo
             {
                 options.AddPolicy("Admin", policy => policy.RequireClaim("Roles", "admin"));
                 options.AddPolicy("Manager", policy => policy.RequireClaim("Roles", "manager", "admin"));
-                options.AddPolicy("Finance", policy => policy.RequireClaim("Roles", "finance"));
+                options.AddPolicy("Finance", policy => {
+                    policy.RequireClaim(ClaimTypes.Role, "admin");
+                    policy.RequireClaim(ClaimTypes.Name, "Vivek");
+                });
             });
         }
 

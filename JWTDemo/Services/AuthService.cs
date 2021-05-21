@@ -36,7 +36,7 @@ namespace JWTDemo.Services
 
             foreach (var role in userViewModel.Roles)
             {
-                claims.Add(new Claim("Roles", role));
+                claims.Add(new Claim(ClaimTypes.Role, role));
             }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AuthConfig:Key").Value));
