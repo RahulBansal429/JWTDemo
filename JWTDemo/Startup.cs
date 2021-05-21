@@ -56,9 +56,7 @@ namespace JWTDemo
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("Admin", policy => policy.RequireClaim("Roles", "admin"));
-                options.AddPolicy("Manager", policy => policy.RequireClaim("Roles", "manager", "admin"));
-                options.AddPolicy("Finance", policy => {
+                options.AddPolicy("Admin", policy => {
                     policy.RequireClaim(ClaimTypes.Role, "admin");
                     policy.RequireClaim(ClaimTypes.Name, "Vivek");
                 });
